@@ -76,10 +76,47 @@ main {
 .loading {
   text-align: center;
   height: 100vh;
+  width: 100%;
   line-height: 100vh;
-  color: #F3CB02;
-  font-size: 16pt;
 }
+@-webkit-keyframes loading-indicator-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-indicator-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-indicator {
+  background: transparent url(./images/loading.gif) right bottom no-repeat;
+  background-image: -webkit-linear-gradient(transparent, transparent), url(./images/loading.svg);
+  background-image: -moz-linear-gradient(transparent, transparent), url(./images/loading.svg);
+  background-image: linear-gradient(transparent, transparent), url(./images/loading.svg);
+  background-size: 100%;
+  -webkit-animation-name: loading-indicator-spin;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: loading-indicator-spin;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+  height: 34px;
+  width: 34px;
+  margin: 0 auto;
+  backface-visibility: hidden;
+}
+
 </style>
 </head>
 <body>
@@ -105,7 +142,7 @@ main {
     Redirect user to the latest conference year for user convenience.
     Note to search engine: we are just being helpful. No monkey business here :-)
   -->
-  <div class="loading">Loading...</div>
+  <div class="loading"><span class="loading-indicator"></span></div>
   <script>
     (function () {
       // force HTTPS for non-localhost site
