@@ -97,12 +97,16 @@ main {
   }
 }
 .loading-indicator {
-  background: transparent url(./images/loading.gif) right bottom no-repeat;
-  background-image: -webkit-linear-gradient(transparent, transparent), url(./images/loading.svg);
-  background-image: -moz-linear-gradient(transparent, transparent), url(./images/loading.svg);
-  background-image: linear-gradient(transparent, transparent), url(./images/loading.svg);
-  background-size: 100%;
-  -webkit-animation-name: loading-indicator-spin;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  border: solid 1px #F3CB02;
+  background-color: #F3CB02;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+
+ -webkit-animation-name: loading-indicator-spin;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -110,13 +114,17 @@ main {
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  display: inline-block;
-  height: 34px;
-  width: 34px;
-  margin: 0 auto;
-  backface-visibility: hidden;
 }
-
+.loading-indicator:after {
+  display: block;
+  background-color: #263d47;
+  content: '';
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
 </style>
 </head>
 <body>
