@@ -159,17 +159,14 @@ main {
   -->
   <div class="loading"><span class="loading-indicator"></span></div>
   <script>
-    (function () {
-      // force HTTPS for non-localhost site
-      if (location.hostname != 'localhost' && location.protocol != 'https:') {
-        window.location.protocol = "https:";
-        window.reload();
-        return;
-      }
+    // force HTTPS for non-localhost site
+    if (location.hostname != 'localhost' && location.protocol != 'https:') {
+      window.location.protocol = "https:";
+      window.location.reload();
+    }
 
-      // redirect to the latest year
-      window.location = "/2018/";
-    })();
+    // redirect to the latest year
+    window.location = "/2018/";
   </script>
 </main>
 </body>
