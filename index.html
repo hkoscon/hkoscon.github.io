@@ -10,11 +10,12 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   background: #263d47;
-  font-size: 10pt;
+  font-size: 16pt;
   color: #EEE;
 }
 blockquote {
   position: relative;
+  text-align: center;
 }
 blockquote:before {
   position: relative;
@@ -22,8 +23,9 @@ blockquote:before {
   display: block;
   content: '\201c';
   color: #F3CB02;
-  font-size: 14pt;
+  font-size: 40px;
   text-align: left;
+  line-height: 2px;
 }
 blockquote:after   {
   position: relative;
@@ -31,8 +33,9 @@ blockquote:after   {
   display: block;
   content: '\201d';
   color: #F3CB02;
-  font-size: 14pt;
+  font-size: 26pt;
   text-align: right;
+  line-height: 2px;
 }
 a {
   color: #F3CB02;
@@ -133,9 +136,12 @@ main {
     <!-- 
       Fallback display for non-javascript browsers and search engines.
     -->
-    <style>.loading { opacity: 0; }</style>
+    <style>.loading { display: none; }</style>
     <h1 class="logo">Hong Kong Open Source Conference</h1>
-    <blockquote>Hong Kong Open Source Conference (HKOSCon) promotes and supports open source projects through communities.</blockquote>
+    <blockquote>
+      Promotes and Supports Open Source Culture<br/>
+      through Communities since 2013.
+    </blockquote>
     <nav>
       <ul>
         <li><a href="/2018/">2018</a></li>
@@ -143,6 +149,7 @@ main {
         <li><a href="https://2016.opensource.hk/" target="_blank">2016</a></li>
         <li><a href="https://2015.opensource.hk/" target="_blank">2015</a></li>
         <li><a href="https://2014.opensource.hk/" target="_blank">2014</a></li>
+        <li><a href="https://opensource.hk/hong-kong-open-source-conference-2013/" target="_blank">2013</a></li>
       </ul>
     </nav>
   </noscript>
