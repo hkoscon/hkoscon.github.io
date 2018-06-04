@@ -1,25 +1,124 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Hong Kong Open Source Conference</title>
-    <meta http-equiv="refresh" content="0; url=/2018" />
-    <meta name="description" content="Hong Kong Open Source Conference (HKOSCon) is aimed to promote, support and develop open source projects and communities." />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-            font-family: 'Roboto', sans-serif;
-            background: #294454;
-            color: #F3CB02;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Hong Kong Open Source Conference</title>
+<meta name="description" content="Hong Kong Open Source Conference (HKOSCon) promotes and supports open source projects through communities." />
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #263d47;
+  font-size: 10pt;
+  color: #EEE;
+}
+blockquote {
+  position: relative;
+}
+blockquote:before {
+  position: relative;
+  left: -28pt;
+  display: block;
+  content: '\201c';
+  color: #F3CB02;
+  font-size: 14pt;
+  text-align: left;
+}
+blockquote:after   {
+  position: relative;
+  right: -28pt;
+  display: block;
+  content: '\201d';
+  color: #F3CB02;
+  font-size: 14pt;
+  text-align: right;
+}
+a {
+  color: #F3CB02;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16pt;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;  
+  background-color: rgba(243, 203, 2, 0);
+  line-height: 2em;
+}
+nav ul li a:hover {
+  background-color: rgba(243, 203, 2, 0.1);
+}
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.logo {
+  display: block;
+  background-image: url("/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgba(243, 203, 2, 0);
+  height: 30vh;
+  margin: 0 auto;
+  font-size: 1pt;
+}
+.loading {
+  text-align: center;
+  height: 50vh;
+  line-height: 50vh;
+  color: #F3CB02;
+  font-size: 16pt;
+}
+</style>
 </head>
-
 <body>
-    <p>Loading...</p>
-</body>
+<main>
+  <h1 class="logo">Hong Kong Open Source Conference</h1>
+  <noscript>
+    <!-- 
+      Fallback display for non-javascript browsers and search engines.
+    -->
+    <style>.loading { opacity: 0; }</style>
+    <blockquote>Hong Kong Open Source Conference (HKOSCon) promotes and supports open source projects through communities.</blockquote>
+    <nav>
+      <ul>
+        <li><a href="/2018/">2018</a></li>
+        <li><a href="/2017/">2017</a></li>
+        <li><a href="https://2016.opensource.hk/" target="_blank">2016</a></li>
+        <li><a href="https://2015.opensource.hk/" target="_blank">2015</a></li>
+        <li><a href="https://2014.opensource.hk/" target="_blank">2014</a></li>
+      </ul>
+    </nav>
+  </noscript>
+  <!--
+    Redirect user to the latest conference year for user convenience.
+    Note to search engine: we are just being helpful. No monkey business here :-)
+  -->
+  <div class="loading">Loading...</div>
+  <script>
+    (function () {
+      // force HTTPS for non-localhost site
+      if (location.hostname != 'localhost' && location.protocol != 'https:') {
+        window.location.protocol = "https:";
+        window.reload();
+        return;
+      }
 
+      // redirect to the latest year
+      window.location = "/2018/";
+    })();
+  </script>
+</main>
+</body>
 </html>
