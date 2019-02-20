@@ -17,6 +17,10 @@ main {
   max-width: 800px;
 }
 
+section {
+  margin: 2em 0 3em;
+}
+
 .center {
   text-align: center;
 }
@@ -64,4 +68,27 @@ main {
 .color.blue {
   color: #E5BE2B;
   background-color: #294454;
+}
+
+.card.logo a, .card.logo a img {
+  display: block;
+}
+
+.card.logo {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card.logo a {
+  display: block;
+  max-height: 362px;
+  height: 20vh;
+}
+.card.logo-dark {
+  background-image: url('./logo-dark.svg');
+  background-color: #294454;
+}
+.card.logo-white {
+  background-image: url('./logo-white.svg');
+  background-color: #FFF;
 }
